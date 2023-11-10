@@ -1,0 +1,77 @@
+h1 {
+  color: black;
+  font-weight: normal;
+}
+
+small {
+  color: #00000083;
+  font-weight: bold;
+  font-size: small;
+}
+
+em {
+  color: black;
+  font-size: 47px;
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  color: #000000a6;
+  font-size: 17px;
+}
+
+.weather-app {
+  border: 1px solid #dadde1;
+  padding: 15px;
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 800px;
+}
+
+.emoji {
+  font-size: 40px;
+}
+
+.units {
+  position: relative;
+  top: -35px;
+  font-size: smaller;
+}
+
+.day {
+  color: #00000083;
+  font-weight: bold;
+  font-size: large;
+}
+
+.description {
+  color: #00000083;
+  font-weight: bold;
+  font-size: large;
+}
+
+.row {
+  color: #006fff;
+  font-size: 23px;
+}
+
+.weather-focast {
+  display: flex;
+  justify-content: space-around;
+}
+
+footer {
+  border-top: 1px solid #f9f7fe;
+  text-align: center;
+  padding-top: 15px;
+
+  color: rgba(39, 33, 66, 0.4);
+}
+
+
+/*# sourceMappingURL=/styles.dd855970.css.map */
