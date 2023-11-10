@@ -139,30 +139,19 @@ function updateTemperature(response) {
   cityElement.innerHTML = response.data.city;
   temperatureElement.innerHTML = temperature;
 }
-function search(event) {
-  event.preventDefault();
-  var cityInput = document.querySelector("#city-input");
-  var city = cityInput.value;
+function searchCity(city) {
   var apiKey = "b2a5adcct04b33178913oc335f405433";
   var apiUrl = "https://api.shecodes.io/weather/v1/current?query=".concat(city, "&key=").concat(apiKey, "&units=metric");
   axios.get(apiUrl).then(updateTemperature);
 }
+function handleSearchSubmit(event) {
+  event.preventDefault();
+  var cityInput = document.querySelector("#city-input");
+  searchCity(cityInput.value);
+}
 var searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", search);
-function convertToFahrenheit(event) {
-  event.preventDefault();
-  var temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 70;
-}
-var fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", convertToFahrenheit);
-function convertToCelsius(event) {
-  event.preventDefault();
-  var temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 21;
-}
-var celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", convertToCelsius);
+searchForm.addEventListener("submit", handleSearchSubmit);
+searchCity("Brakpan");
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';

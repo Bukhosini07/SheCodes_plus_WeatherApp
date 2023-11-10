@@ -16,7 +16,7 @@ let days = [
   "Wednesday",
   "Thursday",
   "Friday",
-  "Saturday"
+  "Saturday",
 ];
 let day = days[dayIndex];
 let dateElement = document.querySelector("#current-date");
@@ -30,30 +30,18 @@ function updateTemperature(response) {
   temperatureElement.innerHTML = temperature;
 }
 
-function search(event) {
-  event.preventDefault();
-  let cityInput = document.querySelector("#city-input");
-  let city = cityInput.value;
+function searchCity(city) {
   let apiKey = "b2a5adcct04b33178913oc335f405433";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
 
   axios.get(apiUrl).then(updateTemperature);
 }
+function handleSearchSubmit(event) {
+  event.preventDefault();
+  let cityInput = document.querySelector("#city-input");
+  searchCity(cityInput.value);
+}
 let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", search);
+searchForm.addEventListener("submit", handleSearchSubmit);
 
-function convertToFahrenheit(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 70;
-}
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", convertToFahrenheit);
-
-function convertToCelsius(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 21;
-}
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", convertToCelsius);
+searchCity("Brakpan");
