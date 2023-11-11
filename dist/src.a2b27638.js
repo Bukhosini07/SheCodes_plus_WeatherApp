@@ -136,7 +136,9 @@ function updateTemperature(response) {
   var temperatureElement = document.querySelector("#temperature");
   var temperature = Math.round(response.data.temperature.current);
   var cityElement = document.querySelector("#city");
+  var descriptionElement = document.querySelector("#weather-description");
   cityElement.innerHTML = response.data.city;
+  descriptionElement.innerHTML = response.data.condition.description;
   temperatureElement.innerHTML = temperature;
 }
 function searchCity(city) {

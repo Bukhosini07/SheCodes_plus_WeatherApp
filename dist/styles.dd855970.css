@@ -55,9 +55,11 @@ ul {
   font-size: large;
 }
 
-.row {
+.cities {
   color: #006fff;
-  font-size: 23px;
+  font-size: 25px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .weather-focast {
