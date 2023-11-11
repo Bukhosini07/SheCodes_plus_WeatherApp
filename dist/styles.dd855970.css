@@ -33,6 +33,13 @@ ul {
   max-width: 500px;
 }
 
+.cities {
+  color: #006fff;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
 .emoji {
   font-size: 40px;
 }
@@ -53,13 +60,6 @@ ul {
   color: #00000083;
   font-weight: bold;
   font-size: large;
-}
-
-.cities {
-  color: #006fff;
-  font-size: large;
-  display: flex;
-  justify-content: space-between;
 }
 
 .weather-focast {
