@@ -57,7 +57,7 @@ ul {
 
 .cities {
   color: #006fff;
-  font-size: 25px;
+  font-size: large;
   display: flex;
   justify-content: space-between;
 }
