@@ -27,10 +27,10 @@ ul {
 
 .weather-app {
   border: 1px solid #dadde1;
-  padding: 15px;
-  margin: 20px auto;
+  padding: 20px;
+  margin: 32px auto;
   border-radius: 10px;
-  max-width: 800px;
+  max-width: 500px;
 }
 
 .emoji {
