@@ -137,9 +137,13 @@ function updateTemperature(response) {
   var temperature = Math.round(response.data.temperature.current);
   var cityElement = document.querySelector("#city");
   var descriptionElement = document.querySelector("#weather-description");
+  var humidityElement = document.querySelector("#humidity");
+  var windElement = document.querySelector("#wind");
+  temperatureElement.innerHTML = temperature;
   cityElement.innerHTML = response.data.city;
   descriptionElement.innerHTML = response.data.condition.description;
-  temperatureElement.innerHTML = temperature;
+  humidityElement.innerHTML = "".concat(response.data.temperature.humidity, "%");
+  windElement.innerHTML = "".concat(response.data.wind.speed, "km/h");
 }
 function searchCity(city) {
   var apiKey = "b2a5adcct04b33178913oc335f405433";
