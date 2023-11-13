@@ -118,20 +118,16 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"src/index.js":[function(require,module,exports) {
-var now = new Date();
-var hours = now.getHours();
-if (hours < 10) {
-  hours = "0".concat(hours);
+function formatDate(date) {
+  var minutes = date.getMinutes();
+  var hours = date.getHours();
+  var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  var day = days[date.getDay()];
+  if (minutes < 10) {
+    minutes = "0".concat(minutes);
+  }
+  return "".concat(day, " ").concat(hours, ":").concat(minutes);
 }
-var minutes = now.getMinutes();
-if (minutes < 10) {
-  minutes = "0".concat(minutes);
-}
-var dayIndex = now.getDay();
-var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-var day = days[dayIndex];
-var dateElement = document.querySelector("#current-date");
-dateElement.innerHTML = "".concat(day, " ").concat(hours, ":").concat(minutes);
 function updateTemperature(response) {
   var temperatureElement = document.querySelector("#temperature");
   var temperature = Math.round(response.data.temperature.current);
@@ -139,11 +135,14 @@ function updateTemperature(response) {
   var descriptionElement = document.querySelector("#weather-description");
   var humidityElement = document.querySelector("#humidity");
   var windElement = document.querySelector("#wind");
+  var timeElement = document.querySelector("#current-date");
+  var date = new Date(response.data.time * 1000);
   temperatureElement.innerHTML = temperature;
   cityElement.innerHTML = response.data.city;
   descriptionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = "".concat(response.data.temperature.humidity, "%");
   windElement.innerHTML = "".concat(response.data.wind.speed, "km/h");
+  timeElement.innerHTML = formatDate(date);
 }
 function searchCity(city) {
   var apiKey = "b2a5adcct04b33178913oc335f405433";
