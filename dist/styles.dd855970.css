@@ -5,19 +5,12 @@ body {
 
 h1 {
   color: white;
-  font-weight: bold;
 }
 
 small {
   color: #2213ec;
   font-weight: bold;
   font-size: small;
-}
-
-em {
-  color: #2213ec;
-  font-size: 47px;
-  font-weight: 600;
 }
 
 a {
@@ -27,13 +20,24 @@ a {
 ul {
   list-style: none;
   color: white;
-  font-size: 17px;
+  font-size: medium;
 }
 
 strong {
   color: #006fff;
   font-weight: bold;
-  font-size: large;
+  font-size: medium;
+}
+
+em {
+  color: #2213ec;
+  font-size: 50px;
+}
+
+img {
+  position: relative;
+  top: -15px;
+  width: 35%;
 }
 
 .weather-app {
@@ -52,10 +56,6 @@ strong {
   justify-content: space-between;
 }
 
-.emoji {
-  font-size: 40px;
-}
-
 .units {
   color: #2213ec;
   position: relative;
@@ -63,16 +63,9 @@ strong {
   font-size: medium;
 }
 
-.day {
+.description-container {
   color: #2213ec;
-  font-weight: bold;
-  font-size: large;
-}
-
-.description {
-  color: #2213ec;
-  font-weight: bold;
-  font-size: large;
+  font-size: medium;
 }
 
 .weather-focast {

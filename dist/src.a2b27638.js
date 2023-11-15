@@ -137,6 +137,8 @@ function updateTemperature(response) {
   var windElement = document.querySelector("#wind");
   var timeElement = document.querySelector("#current-date");
   var date = new Date(response.data.time * 1000);
+  var iconElement = document.querySelector("#icon");
+  iconElement.innerHTML = "<img src=\"".concat(response.data.condition.icon_url, "\" class=\"weather-app-icon\" />");
   temperatureElement.innerHTML = temperature;
   cityElement.innerHTML = response.data.city;
   descriptionElement.innerHTML = response.data.condition.description;
