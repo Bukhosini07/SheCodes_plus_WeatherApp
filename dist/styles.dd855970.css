@@ -20,18 +20,18 @@ a {
 ul {
   list-style: none;
   color: white;
-  font-size: medium;
+  font-size: large;
 }
 
 strong {
   color: #006fff;
   font-weight: bold;
-  font-size: medium;
+  font-size: large;
 }
 
 em {
   color: #2213ec;
-  font-size: 45px;
+  font-size: 65px;
 }
 
 img {
@@ -45,15 +45,14 @@ img {
   padding: 20px;
   margin: 32px auto;
   border-radius: 10px;
-  max-width: 500px;
+  max-width: 600px;
+  padding-top: 40px;
 }
 
-.cities {
-  color: #2213ec;
-  font-weight: bold;
-  font-size: 20px;
-  display: flex;
-  justify-content: space-between;
+.logo {
+  width: 80px;
+  position: relative;
+  top: -35px;
 }
 
 .units {
@@ -65,7 +64,7 @@ img {
 
 .description-container {
   color: #2213ec;
-  font-size: medium;
+  font-size: large;
 }
 
 .weather-focast {
@@ -79,7 +78,7 @@ footer {
   text-align: center;
   padding-top: 15px;
 
-  color: black;
+  color: white;
 }
 
 
