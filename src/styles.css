@@ -15,14 +15,18 @@ small {
 
 a {
   text-decoration: none;
+  color: #006fff;
 }
 
-ul {
-  list-style: none;
+.first-description {
   color: white;
   font-size: large;
 }
 
+.second-description {
+  color: white;
+  font-size: large;
+}
 strong {
   color: #006fff;
   font-weight: bold;
@@ -31,13 +35,13 @@ strong {
 
 em {
   color: #2213ec;
-  font-size: 65px;
+  font-size: 80px;
 }
 
 img {
   position: relative;
   top: -25px;
-  width: 45%;
+  width: 40%;
 }
 
 .weather-app {
@@ -57,9 +61,9 @@ img {
 
 .units {
   color: #2213ec;
+  font-size: x-large;
   position: relative;
-  top: -35px;
-  font-size: medium;
+  top: -45px;
 }
 
 .description-container {
@@ -67,16 +71,10 @@ img {
   font-size: large;
 }
 
-.weather-focast {
-  color: #2213ec;
-  display: flex;
-  justify-content: space-around;
-}
-
 footer {
-  border-top: 1px solid #f9f7fe;
+  border-top: 1px solid white;
   text-align: center;
   padding-top: 15px;
 
-  color: white;
+  color: black;
 }
