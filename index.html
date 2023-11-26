@@ -36,76 +36,25 @@
         </form>
       </header>
       <br />
-      <section>
-         <div class="row">
+      <main>
+        <div class="row">
           <div class="col-6">
             <h1 id="city"></h1>
             <div class="description-container">
               <div id="current-date"></div>
               <div id="weather-description"></div>
-              </div>
-              <br />
+            </div>
+            <br />
+            <div class="first-description">Humidity: <strong id="humidity"></strong></div>
+            <div class="second-description">Wind: <strong id="wind"></strong></div>
+          </div>
+            <div class="col-6">
             <span class="emoji" id="icon"></span>
             <em id="temperature"></em>
-            <span class="units">
-              <a href="#" id="celsius-link">°C</a>
-            </span>
-          </div>
-          <div class="col-6">
-              <ul>
-                <li>Humidity: <strong id="humidity"></strong></li>
-                <li>Wind: <strong id="wind"></strong></li>
-              </ul>
+              <span class="units" id="celsius-link">°C</span>
             </div>
-          </div>
-          <br />
-      </section>
-      <main>
-        <div class="weather-focast">
-          <div>
-            Tue
-            <br />
-            ☀
-            <br />
-            <small>16°C</small>
-          </div>
-          <div>
-            Wed
-            <br />
-            ☁
-            <br />
-            <small>16°C</small>
-          </div>
-          <div>
-            Thu
-            <br />
-            ☀
-            <br />
-            <small>16°C</small>
-          </div>
-          <div>
-            Fri
-            <br />
-            ☁
-            <br />
-            <small>16°C</small>
-          </div>
-          <div>
-            Sat
-            <br />
-            ☁
-            <br />
-            <small>9°C</small>
-          </div>
-            <div>
-              Sun
-              <br />
-              ☀
-              <br />
-            <small>20°C</small>
-          </div>
-        </div>
       </main>
+      <br />
       <br />
       <footer>
         <p>
@@ -114,6 +63,7 @@
         </p>
       </footer>
     </div>
-  </body>
+  </div>
+    </body>
   <script src="src/index.js"></script>
 </html>
