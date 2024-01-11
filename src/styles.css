@@ -35,7 +35,7 @@ strong {
 
 em {
   color: #2213ec;
-  font-size: 80px;
+  font-size: 60px;
 }
 
 img {
@@ -76,5 +76,5 @@ footer {
   text-align: center;
   padding-top: 15px;
 
-  color: black;
+  color: white;
 }
